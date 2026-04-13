@@ -185,7 +185,7 @@ config:
   recompute_modules: null
   recompute_num_layers: null
   rope_type: rope
-  rotary_base: 1000000.0
+  rotary_base: 10000
   rotary_interleaved: false
   rotary_percent: 1.0
   scatter_embedding_sequence_parallel: true
@@ -258,7 +258,7 @@ optim:
     log_num_zeros_in_grad: false
     loss_scale: null
     loss_scale_window: 1000
-    lr: 1.0e-05
+    lr: 3.0e-05
     main_grads_dtype:
       _call_: false
       _target_: torch.float32
@@ -293,10 +293,10 @@ optim:
     constant_steps: 0
     frequency: 1
     interval: step
-    max_steps: 990000
-    min_lr: 5.0e-06
+    max_steps: 204
+    min_lr: 1.0e-06
     monitor: val_loss
-    warmup_steps: 1
+    warmup_steps: 2
   no_weight_decay_cond: null
   scale_lr_cond: null
 tokenizer:

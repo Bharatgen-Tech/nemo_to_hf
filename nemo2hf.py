@@ -188,14 +188,15 @@ fp8_quant_config = {
 
 gen_config = lambda args, tokenizer: f"""{{
     "architectures": [
-        "BailingMoeV2ForCausalLM"
+        "Param2MoEForCausalLM"
     ],
     "attention_dropout": 0.0,
-    "auto_map": {{
-        "AutoConfig": "configuration_bailing_moe_v2.BailingMoeV2Config",
-        "AutoModel": "modeling_bailing_moe_v2.BailingMoeV2Model",
-        "AutoModelForCausalLM": "modeling_bailing_moe_v2.BailingMoeV2ForCausalLM"
-    }},
+    "auto_map": {
+        "AutoConfig": "configuration_param2moe.Param2MoEConfig",
+        "AutoModel": "modeling_param2moe.Param2MoEModel",
+        "AutoModelForCausalLM": "modeling_param2moe.Param2MoEForCausalLM"
+    },
+    "model_type": "param2moe",
     "num_hidden_layers": {args.num_layers},
     "hidden_size": {args.hidden_size},
     "intermediate_size": {args.ffn_hidden_size},
@@ -204,7 +205,6 @@ gen_config = lambda args, tokenizer: f"""{{
     "first_k_dense_replace": {args.first_k_dense if hasattr(args, 'first_k_dense') else args.first_k_dense_replace},
     "hidden_act": "silu",
     "max_position_embeddings": {args.seq_length},
-    "model_type": "bailing_moe",
     "moe_intermediate_size": {args.moe_ffn_hidden_size},
     "norm_topk_prob": true,
     "num_experts_per_tok": {args.moe_router_topk},

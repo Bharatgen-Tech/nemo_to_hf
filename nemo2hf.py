@@ -191,11 +191,11 @@ gen_config = lambda args, tokenizer: f"""{{
         "Param2MoEForCausalLM"
     ],
     "attention_dropout": 0.0,
-    "auto_map": {
+    "auto_map": {{
         "AutoConfig": "configuration_param2moe.Param2MoEConfig",
         "AutoModel": "modeling_param2moe.Param2MoEModel",
         "AutoModelForCausalLM": "modeling_param2moe.Param2MoEForCausalLM"
-    },
+    }},
     "model_type": "param2moe",
     "num_hidden_layers": {args.num_layers},
     "hidden_size": {args.hidden_size},

@@ -6,21 +6,6 @@
     "<<|/ASSISTANT|>>",
     "<<|SYSTEM|>>",
     "<<|/SYSTEM|>>",
-    "<<|THINK|>>",
-    "<<|/THINK|>>",
-    "<<|TOOL_CALL|>>",
-    "<<|/TOOL_CALL|>>",
-    "<<|TOOL_RESPONSE|>>",
-    "<<|/TOOL_RESPONSE|>>",
-    "<<|RESERVED_0|>>",
-    "<<|RESERVED_1|>>",
-    "<<|RESERVED_2|>>",
-    "<<|RESERVED_3|>>",
-    "<<|RESERVED_4|>>",
-    "<<|RESERVED_5|>>",
-    "<<|RESERVED_6|>>",
-    "<<|RESERVED_7|>>",
-    "<<|RESERVED_8|>>",
     "<<|RESERVED_9|>>",
     "<<|RESERVED_10|>>",
     "<<|RESERVED_11|>>",
@@ -8013,8 +7998,32 @@
     "<<|RESERVED_7998|>>",
     "<<|RESERVED_7999|>>"
   ],
-  "bos_token": "<<|BOS|>>",
-  "eos_token": "<<|EOS|>>",
-  "pad_token": "<<|PAD|>>",
-  "unk_token": "<<|UNK|>>"
+  "bos_token": {
+    "content": "<<|BOS|>>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "eos_token": {
+    "content": "<<|EOS|>>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "pad_token": {
+    "content": "<<|PAD|>>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "unk_token": {
+    "content": "<<|UNK|>>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  }
 }

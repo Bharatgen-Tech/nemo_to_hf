@@ -81,55 +81,55 @@
       "special": true
     },
     "10": {
-      "content": "<<|THINK|>>",
+      "content": "<think>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
       "single_word": false,
-      "special": true
+      "special": false
     },
     "11": {
-      "content": "<<|/THINK|>>",
+      "content": "</think>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
       "single_word": false,
-      "special": true
+      "special": false
     },
     "12": {
-      "content": "<<|TOOL_CALL|>>",
+      "content": "<tool_call>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
       "single_word": false,
-      "special": true
+      "special": false
     },
     "13": {
-      "content": "<<|/TOOL_CALL|>>",
+      "content": "</tool_call>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
       "single_word": false,
-      "special": true
+      "special": false
     },
     "14": {
-      "content": "<<|TOOL_RESPONSE|>>",
+      "content": "<tool_response>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
       "single_word": false,
-      "special": true
+      "special": false
     },
     "15": {
-      "content": "<<|/TOOL_RESPONSE|>>",
+      "content": "</tool_response>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
       "single_word": false,
-      "special": true
+      "special": false
     },
     "16": {
-      "content": "<<|RESERVED_0|>>",
+      "content": "<<|FIM_SUFFIX|>>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -137,7 +137,7 @@
       "special": true
     },
     "17": {
-      "content": "<<|RESERVED_1|>>",
+      "content": "<<|FIM_PREFIX|>>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -145,7 +145,7 @@
       "special": true
     },
     "18": {
-      "content": "<<|RESERVED_2|>>",
+      "content": "<<|FIM_MIDDLE|>>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -153,7 +153,7 @@
       "special": true
     },
     "19": {
-      "content": "<<|RESERVED_3|>>",
+      "content": "<<|FIM_EOS|>>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -161,7 +161,7 @@
       "special": true
     },
     "20": {
-      "content": "<<|RESERVED_4|>>",
+      "content": "<<|FIM_PAD|>>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -169,7 +169,7 @@
       "special": true
     },
     "21": {
-      "content": "<<|RESERVED_5|>>",
+      "content": "<|im_start|>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -177,7 +177,7 @@
       "special": true
     },
     "22": {
-      "content": "<<|RESERVED_6|>>",
+      "content": "<|im_end|>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -185,7 +185,7 @@
       "special": true
     },
     "23": {
-      "content": "<<|RESERVED_7|>>",
+      "content": "<tools>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -193,7 +193,7 @@
       "special": true
     },
     "24": {
-      "content": "<<|RESERVED_8|>>",
+      "content": "</tools>",
       "lstrip": false,
       "normalized": false,
       "rstrip": false,
@@ -64136,21 +64136,6 @@
     "<<|/ASSISTANT|>>",
     "<<|SYSTEM|>>",
     "<<|/SYSTEM|>>",
-    "<<|THINK|>>",
-    "<<|/THINK|>>",
-    "<<|TOOL_CALL|>>",
-    "<<|/TOOL_CALL|>>",
-    "<<|TOOL_RESPONSE|>>",
-    "<<|/TOOL_RESPONSE|>>",
-    "<<|RESERVED_0|>>",
-    "<<|RESERVED_1|>>",
-    "<<|RESERVED_2|>>",
-    "<<|RESERVED_3|>>",
-    "<<|RESERVED_4|>>",
-    "<<|RESERVED_5|>>",
-    "<<|RESERVED_6|>>",
-    "<<|RESERVED_7|>>",
-    "<<|RESERVED_8|>>",
     "<<|RESERVED_9|>>",
     "<<|RESERVED_10|>>",
     "<<|RESERVED_11|>>",

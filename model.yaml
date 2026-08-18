@@ -31,7 +31,7 @@ config:
   calculate_per_token_loss: false
   clone_scatter_output_in_embedding: true
   config_logger_dir: ''
-  context_parallel_size: 1
+  context_parallel_size: 4
   cp_comm_type: null
   cpu_offloading: false
   cpu_offloading_activations: true
@@ -105,7 +105,7 @@ config:
   mamba_num_heads: null
   mamba_state_dim: 128
   masked_softmax_fusion: true
-  max_position_embeddings: 4096
+  max_position_embeddings: 32768
   memory_efficient_layer_norm: false
   microbatch_group_size_per_vp_stage: 1
   mlp_chunks_for_prefill: 1
@@ -180,17 +180,17 @@ config:
   position_embedding_type: rope
   qk_layernorm: true
   quant_recipe: null
-  recompute_granularity: null
-  recompute_method: null
+  recompute_granularity: full
+  recompute_method: block
   recompute_modules: null
-  recompute_num_layers: null
+  recompute_num_layers: 2
   rope_type: rope
-  rotary_base: 10000
+  rotary_base: 500000
   rotary_interleaved: false
   rotary_percent: 1.0
   scatter_embedding_sequence_parallel: true
   seq_len_interpolation_factor: null
-  seq_length: 4096
+  seq_length: 32768
   sequence_parallel: false
   share_embeddings_and_output_weights: true
   softmax_scale: null
@@ -258,7 +258,7 @@ optim:
     log_num_zeros_in_grad: false
     loss_scale: null
     loss_scale_window: 1000
-    lr: 0.0001
+    lr: 5.0e-06
     main_grads_dtype:
       _call_: false
       _target_: torch.float32
@@ -293,10 +293,10 @@ optim:
     constant_steps: 0
     frequency: 1
     interval: step
-    max_steps: 1707100
-    min_lr: 1.0e-05
+    max_steps: 60000
+    min_lr: 1.0e-06
     monitor: val_loss
-    warmup_steps: 5121.3
+    warmup_steps: 1800.0
   no_weight_decay_cond: null
   scale_lr_cond: null
 tokenizer:
